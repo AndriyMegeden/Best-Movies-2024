@@ -31,7 +31,7 @@ export class TitleFilmsComponent {
         scrub: true
       }
     })
-    gsap.fromTo('.best-title', {y: -50}, {
+    gsap.fromTo('.best-title', {y: -50,  duration: 5}, {
       y: 50,
       ease: "none",
       duration: 5,
@@ -43,14 +43,14 @@ export class TitleFilmsComponent {
         scrub: 1
       }
     })
-    gsap.fromTo('.cards', {y: -50}, {
+    gsap.fromTo('.cards', {y: -70,  duration: 5}, {
       y: 50,
       ease: "none",
-      duration: 1.5,
+      duration: 2.5,
       scrollTrigger: {
         trigger: '.cards', 
        start: '-100 top',
-       end: '500, center',
+       end: '800, center',
         markers: false, 
         scrub: true,
       }
