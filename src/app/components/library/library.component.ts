@@ -12,12 +12,14 @@ import ScrollSmoother from 'gsap-trial/ScrollSmoother';
 export class LibraryComponent implements OnInit {
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    ScrollSmoother.create({
-      wrapper: '.wrapper',
-      content: '.content',
-      smooth: 1.5,
-      effects: true
-    });
+    // ScrollSmoother.create({
+    //   wrapper: '.wrapper',
+    //   content: '.content',
+    //   smooth: 1.5,
+    //   effects: true
+    // });
+
+    
    // це метод GSAP, який перетворює елементи DOM, вибрані за допомогою CSS селектора, на масив.
    const itemsL = document.querySelectorAll('.posters-left .item') as NodeListOf<HTMLElement>;
     // тут перебираються 
