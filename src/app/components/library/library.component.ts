@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import ScrollSmoother from 'gsap-trial/ScrollSmoother';
+// import ScrollSmoother from 'gsap-trial/ScrollSmoother';
 @Component({
   selector: 'app-library',
   standalone: true,
@@ -11,7 +11,8 @@ import ScrollSmoother from 'gsap-trial/ScrollSmoother';
 })
 export class LibraryComponent implements OnInit {
   ngOnInit(): void {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    gsap.registerPlugin(ScrollTrigger)
+    // gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     // ScrollSmoother.create({
     //   wrapper: '.wrapper',
     //   content: '.content',
