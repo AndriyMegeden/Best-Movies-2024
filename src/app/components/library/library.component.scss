@@ -1,0 +1,30 @@
+.posters {
+    padding-left: 150px;
+    padding-right: 150px;
+  .wrap {
+    .movie {
+      width: auto;
+      height: 600px;
+      max-width: 600px;
+      display: block;
+      img {
+        border-radius: 10px;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .text {
+        max-width: 600px;
+        text-align: center;
+      .title {
+        font-size: 40px;
+        color: var(--white)
+      }
+      .subtitle {
+        font-size: 30px;
+        color: var(--white-opacity)
+      }
+    }
+  }
+}

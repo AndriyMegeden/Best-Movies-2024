@@ -1,0 +1,43 @@
+.wrapper {
+  max-width: 1440px;
+  padding: 0;
+  position: relative;
+}
+.main-container {
+  height: 100vh;
+  .title-films {
+    .title {
+      will-change: transform;
+      z-index: 3;
+      text-align: center;
+      font-size: 100px;
+      font-weight: 900;
+      font-family: Urbanist;
+    }
+    height: 100%;
+    .cards {
+      will-change: transform;
+      .card {
+        width: auto;
+        height: 400px;
+        display: block;
+        img {
+          border-radius: 10px;
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      .first {
+        transform: rotate(-15deg);
+      }
+      .second {
+        z-index: 2;
+        margin-bottom: 20px;
+      }
+      .third {
+        transform: rotate(15deg);
+      }
+    }
+  }
+}
