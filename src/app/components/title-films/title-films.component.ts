@@ -31,10 +31,11 @@ export class TitleFilmsComponent {
         scrub: true
       }
     })
-    gsap.fromTo('.best-title', {y: -50,  duration: 5}, {
+    gsap.from('.best-title', {opacity: 0, duration: 1, y: -50})
+    gsap.fromTo('.best-title', {}, {
       y: 50,
       ease: "none",
-      duration: 5,
+      duration: 3,
       scrollTrigger: {
         trigger: '.title', 
         markers: false,
@@ -43,7 +44,8 @@ export class TitleFilmsComponent {
         scrub: 1
       }
     })
-    gsap.fromTo('.cards', {y: -70,  duration: 5}, {
+    gsap.from('.cards', {opacity: 0, duration: 1, y: -50})
+    gsap.fromTo('.cards', {}, {
       y: 50,
       ease: "none",
       duration: 2.5,

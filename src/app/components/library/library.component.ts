@@ -21,7 +21,7 @@ export class LibraryComponent implements OnInit {
     // });
 
     
-   // це метод GSAP, який перетворює елементи DOM, вибрані за допомогою CSS селектора, на масив.
+   // отримуємо доступ до елементів по класу 
    const itemsL = document.querySelectorAll('.posters-left .item') as NodeListOf<HTMLElement>;
     // тут перебираються 
     itemsL.forEach(item =>  {
@@ -41,7 +41,7 @@ export class LibraryComponent implements OnInit {
     itemsR.forEach(item =>  {
       gsap.fromTo( item, { x: 100, opacity: 0}, {
         opacity: 1,  x: 0,
-        scrollTrigger: {
+        scrollTrigger: { 
           trigger: item,
           scrub: true 
         }
