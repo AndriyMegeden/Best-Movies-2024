@@ -36,23 +36,45 @@ export class TitleFilmsComponent {
       }
     );
     gsap.from('.best-title', { opacity: 0, duration: 1, y: -50 });
-    gsap.fromTo(
-      '.best-title',
-      {},
-      {
-        y: 50,
-        ease: 'none',
-        duration: 3,
-        scrollTrigger: {
-          trigger: '.title',
-          markers: false,
-          start: '-220 top',
-          end: '-50 40',
-          scrub: 1,
-        },
-      }
-    );
+
+    if (ScrollTrigger.isTouch === 1) {
+      gsap.fromTo(
+        '.best-title',
+        {},
+        {
+          y: 50,
+          ease: 'none',
+          duration: 3,
+          scrollTrigger: {
+            trigger: '.title',
+            scrub: 1,
+            start: '0 top',
+            // end: '-50 40',
+            markers: false,
+          },
+        }
+      );
+    } else {
+      gsap.fromTo(
+        '.best-title',
+        {},
+        {
+          y: 50,
+          ease: 'none',
+          duration: 3,
+          scrollTrigger: {
+            trigger: '.title',
+            scrub: 1,
+            start: '-220 top',
+            end: '-50 40',
+            markers: false,
+          },
+        }
+      );
+    }
+
     gsap.from('.title-films', { opacity: 0, duration: 1, y: -50 });
+
     // gsap.fromTo(
     //   '.cards',
     //   {},
