@@ -52,7 +52,7 @@ export class TitleFilmsComponent {
         },
       }
     );
-    gsap.from('.cards', { opacity: 0, duration: 1, y: -50 });
+    gsap.from('.title-films', { opacity: 0, duration: 1, y: -50 });
     // gsap.fromTo(
     //   '.cards',
     //   {},
