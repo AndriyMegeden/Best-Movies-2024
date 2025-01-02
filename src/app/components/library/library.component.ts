@@ -21,17 +21,7 @@ export class LibraryComponent implements OnInit {
     // });  
    // отримуємо доступ до елементів по класу 
    const itemsL = document.querySelectorAll('.posters-left .item') as NodeListOf<HTMLElement>;
-    // тут перебираються 
-    itemsL.forEach(item =>  {
-
-      gsap.fromTo( item, { x: -100, opacity: 0}, {
-        opacity: 1,  x: 0,
-        scrollTrigger: {
-          trigger: item,
-          scrub: true  
-        }
-      })
-    }) 
+    
 
     if(ScrollTrigger.isTouch === 1){
       itemsL.forEach(item =>  {
@@ -44,19 +34,24 @@ export class LibraryComponent implements OnInit {
           }
         })
       }) 
+    } else{
+            // тут перебираються 
+          itemsL.forEach(item =>  {
+
+            gsap.fromTo( item, { x: -100, opacity: 0}, {
+              opacity: 1,  x: 0,
+              scrollTrigger: {
+                trigger: item,
+                scrub: true  
+              }
+            })
+          }) 
     }
+
+
   
     const itemsR = document.querySelectorAll('.posters-right .item') as NodeListOf<HTMLElement>;
-    // тут перебираються 
-    itemsR.forEach(item =>  {
-      gsap.fromTo( item, { x: 100, opacity: 0}, {
-        opacity: 1,  x: 0,
-        scrollTrigger: { 
-          trigger: item,
-          scrub: true
-        }
-      })
-    }) 
+    
     if(ScrollTrigger.isTouch === 1){
       itemsR.forEach(item =>  {
         gsap.fromTo( item, { x: 100, opacity: 0}, {
@@ -67,6 +62,17 @@ export class LibraryComponent implements OnInit {
           }
         })
       }) 
-    }  
+    }  else{
+      // тут перебираються 
+      itemsR.forEach(item =>  {
+        gsap.fromTo( item, { x: 100, opacity: 0}, {
+          opacity: 1,  x: 0,
+          scrollTrigger: { 
+            trigger: item,
+            scrub: true
+          }
+        })
+      }) 
+    }
   }
 }
