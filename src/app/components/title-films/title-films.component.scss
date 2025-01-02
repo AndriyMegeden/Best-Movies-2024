@@ -80,22 +80,18 @@
           transform: rotate(15deg);
           margin-bottom: 0px;
         }
+        .card {
+          img{
+            border-radius: 0px;
+            object-fit: cover;
+          }
+        }
       }
       .title{
         font-size: 50px;
       }
       .cards {
         display: none;
-        .card {
-          height: 380px;
-
-          img {
-            border-radius: 10px;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-          }
-        }
       }
     }
   }
@@ -103,14 +99,5 @@
 @media (max-width: 630px) {
   .main-container {
     overflow: hidden;
-    .cards-mobile {
-      .card {
-        height: auto !important;
-        border-radius: 100px;
-        img {
-          border-radius: 100px !important;
-        }
-      }
-    }
   }
 }
