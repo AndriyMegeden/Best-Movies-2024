@@ -32,20 +32,20 @@ export class LibraryComponent implements OnInit {
         }
       })
     }) 
-    if (ScrollTrigger.isTouch !== 1) {
+
+    if(ScrollTrigger.isTouch === 1){
       itemsL.forEach(item =>  {
+
         gsap.fromTo( item, { x: -100, opacity: 0}, {
           opacity: 1,  x: 0,
           scrollTrigger: {
             trigger: item,
-            scrub: false 
+            scrub: false  
           }
         })
       }) 
-    }   
-
-
-
+    }
+  
     const itemsR = document.querySelectorAll('.posters-right .item') as NodeListOf<HTMLElement>;
     // тут перебираються 
     itemsR.forEach(item =>  {
@@ -56,17 +56,17 @@ export class LibraryComponent implements OnInit {
           scrub: true
         }
       })
-    })   
-    if (ScrollTrigger.isTouch !== 1) {
+    }) 
+    if(ScrollTrigger.isTouch === 1){
       itemsR.forEach(item =>  {
         gsap.fromTo( item, { x: 100, opacity: 0}, {
           opacity: 1,  x: 0,
           scrollTrigger: { 
             trigger: item,
-            scrub: false 
+            scrub: false
           }
         })
-      })   
-    } 
+      }) 
+    }  
   }
 }
